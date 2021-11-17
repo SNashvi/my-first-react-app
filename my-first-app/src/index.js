@@ -22,19 +22,22 @@ const secondBook = {
 function BookList() {
   return (
     <section className="booklist">
-      <Book img={firsBook.img} title={firsBook.title} author={firsBook.author} alt={firsBook.alt} />
+      <Book img={firsBook.img} title={firsBook.title} author={firsBook.author} alt={firsBook.alt}>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id inventore magni ut animi exercitationem. Aspernatur officia asperiores eum expedita, in quasi deserunt ea dolorum atque rerum fugit? Possimus, doloremque voluptas!</p>
+      </Book>
       <Book img={secondBook.img} title={secondBook.title} author={secondBook.author} alt={secondBook.alt} />
     </section>
   );
 }
 
-const Book = ({ img, title, author, alt }) => {
+const Book = ({ img, title, author, alt, children }) => {
   // const { img, title, author, alt } = props;
   return (
     <article className="book">
       <img src={img} alt={alt} />
       <h1>{title}</h1>
       <h4>{author}</h4>
+      {children}
     </article>
   );
 };
