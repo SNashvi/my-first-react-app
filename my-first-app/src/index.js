@@ -13,21 +13,16 @@ function BookList() {
     </section>
   );
 }
-
+const author = "by Steve Herman";
 const Book = () => {
+  const title = "Teach Your Dragon To Share";
   return (
     <article className="book">
-      <Image />
-      <Title />
-      <Author />
+      <img src="https://m.media-amazon.com/images/I/71f9a+-aSPL._AC_UL320_.jpg" alt="Teach Your Dragon To Share Book" />
+      <h1>{title}</h1>
+      <h4>{author.toUpperCase()}</h4>
     </article>
   );
 };
-
-const Image = () => <img src="https://m.media-amazon.com/images/I/71f9a+-aSPL._AC_UL320_.jpg" alt="Teach Your Dragon To Share Book" />;
-
-const Title = () => <h1>Teach Your Dragon To Share</h1>;
-
-const Author = () => <h4 style={{ color: "#617d98", fontSize: "0.75rem", marginTop: "0.25rem" }}>by Steve Herman</h4>;
 
 ReactDom.render(<BookList />, document.getElementById("root"));
